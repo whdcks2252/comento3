@@ -5,13 +5,14 @@
 
     <insert id="save">
         insert into request_Info (requestid,request_code,user_id,create_date)
-        values (#{requestID},#{requestCode},#{userId},#{createDate})
+        values (#{requestID},#{requestCode},#{userId},NOW())
     </insert>
 
     <select id="selectYearLogin" parameterType="string">
         select count(*) as totCnt
         from request_Info ri
-        where left(ri.create_Date, 2) = #{year};
+        where year(create_date) = #{year};
     </select>
+
 
 </mapper>

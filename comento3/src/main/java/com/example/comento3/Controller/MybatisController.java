@@ -19,7 +19,7 @@ public class MybatisController {
     @ResponseBody
     public RequestInfo save() {
         RequestInfo save = mybatisRepository.save(
-                new RequestInfo(9L,"A","AAA","123123"));
+                new RequestInfo(9L,"A","AAA"));
 
         return save;
     }

@@ -8,6 +8,12 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class RequestInfo {
+    public RequestInfo(Long requestID, String requestCode, String userId) {
+        this.requestID = requestID;
+        this.requestCode = requestCode;
+        this.userId = userId;
+    }
+
     private Long requestID;
     private String requestCode;
     private String userId;
