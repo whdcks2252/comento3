@@ -2,12 +2,12 @@
 
 ![image](https://github.com/whdcks2252/comento3/assets/66254633/bb2159d2-d65f-4ec1-a830-9ad9d6e24940)
 
-<br/><br/><br/><br/>
+<br/>
 초기데이터 셋
-<br/><br/><br/><br/>
+<br/>
 ![image](https://github.com/whdcks2252/comento3/assets/66254633/dad7d9a9-c265-495c-b823-17ad94a125ee)
 
-<br/><br/><br/><br/>
+<br/>
 
 REQUEST_INFO 의 create_date속성을 LocalDateTime으로 변경하였습니다
 
