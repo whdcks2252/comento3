@@ -36,7 +36,7 @@ REQUEST_INFO 의 create_date속성을 LocalDateTime으로 변경하였습니다
 
 
    <br/>
-5) 부서별 월별 로그인 수
+4) 부서별 월별 로그인 수
 SELECT month(a.create_date),b.hr_organ,count(a.create_date)  FROM REQUEST_INFO as A  LEFT JOIN user as B ON A.user_ID= b.user_id  group by month(a.create_date),b.hr_organ
 
 ![image](https://github.com/whdcks2252/comento3/assets/66254633/f1d4aa71-4544-4c89-8543-f856bca21e54)
