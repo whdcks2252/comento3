@@ -29,7 +29,7 @@ REQUEST_INFO 의 create_date속성을 LocalDateTime으로 변경하였습니다
 
 <br/>
 3) 평균 하루 로그인 수
-
+<br/> 
 <br/>   
 4**) 휴일을 제외한 로그인 수 ( 해당 문제에서는 휴일을 포함합니다.)**
 
