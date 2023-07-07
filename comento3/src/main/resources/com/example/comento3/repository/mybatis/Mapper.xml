@@ -14,5 +14,31 @@
         where year(create_date) = #{year};
     </select>
 
+    <select id="selectMonthLogin" parameterType="string">
+        select month(create_date)as monthDate,count(create_date) as totCnt
+        FROM REQUEST_INFO group by month(create_date);
+
+    </select>
+
+    <select id="selectDayLogin" parameterType="string">
+        select day(create_date)as dayDate,count(create_date) as totCnt FROM
+            REQUEST_INFO group by day(create_date)
+    </select>
+
+    <select id="selectDayAvgLogin" parameterType="string">
+        select avg(totCnt)as dayAvg  from ( select day(create_date)as dayDate,count(create_date) as totCnt FROM
+            REQUEST_INFO group by day(create_date))
+    </select>
+
+
+    <select id="selectNotWeek" parameterType="string">
+        SELECT create_date as datetime,DAYOFWEEK(create_date)as daynotweek FROM REQUEST_INFO where dayofweek(create_date) not in('1','7')
+        </select>
+
+    <select id="selectHrMonthLogin" parameterType="string">
+        select month(a.create_date)as monthDate,b.hr_organ as hrOrgan,count(a.create_date) as totcnt
+        FROM REQUEST_INFO as A LEFT JOIN user as B ON A.user_ID= b.user_id
+        group by month(a.create_date),b.hr_organ
+    </select>
 
 </mapper>

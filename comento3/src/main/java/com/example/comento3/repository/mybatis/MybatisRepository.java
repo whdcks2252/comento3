@@ -1,9 +1,10 @@
 package com.example.comento3.repository.mybatis;
 
-import com.example.comento3.domain.Count;
-import com.example.comento3.domain.RequestInfo;
+import com.example.comento3.domain.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
@@ -21,4 +22,24 @@ public class MybatisRepository {
         return count;
     }
 
+    public List<MonthCount> selectMonthLogin() {
+        List<MonthCount> count = mapper.selectMonthLogin();
+        return count;
+    }
+    public List<DayCount> selectDayLogin() {
+        List<DayCount> count = mapper.selectDayLogin();
+        return count;
+    }
+    public DayAvg  selectDayAvgLogin(){
+        DayAvg dayAvg = mapper.selectDayAvgLogin();
+        return dayAvg;
+    }
+    public List<NotWeek> selectNotWeek(){
+        List<NotWeek> notWeek = mapper.selectNotWeek();
+        return notWeek;
+    }
+    public List<HrOrganCount> selectHrMonthLogin() {
+        List<HrOrganCount> count = mapper.selectHrMonthLogin();
+        return count;
+    }
 }
